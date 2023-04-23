@@ -19,4 +19,4 @@ with open("integers.txt", "r") as integer_file, open ("squared_even.txt", "w") a
         # if odd, cube it, and write it to "cubed_odd.txt" file
         else:
             cubed=num**3
-            odd_file.write(str(cubed)+'n')
+            odd_file.write(str(cubed)+'\n')
