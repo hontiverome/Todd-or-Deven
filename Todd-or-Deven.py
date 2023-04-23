@@ -21,6 +21,10 @@ def sEven_cOdd_itegers():
             else:
                 cubed=num**3
                 odd_file.write(str(cubed)+'\n')
+def check_contents():
+    with open("integers.txt", "r") as integer_file:
+
+        
 def open_text():
     with open ("squared_even.txt", "r") as even_file, open ("cubed_odd.txt", "r") as odd_file:
         response=str(input("\nWould you like to print out the contents of the text files? (y or n only):\n "))
