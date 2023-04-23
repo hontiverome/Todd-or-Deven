@@ -22,6 +22,32 @@ def sEven_cOdd_itegers():
                 cubed=num**3
                 odd_file.write(str(cubed)+'\n')
 def open_text():
+    with open ("squared_even.txt", "r") as even_file, open ("cubed_odd.txt", "r") as odd_file:
+        response=str(input("\nWould you like to print out the contents of the text files? (y or n only):\n "))
+        while True:
+            if response=='y':
+                print_response=str(input("\nWhat text file would you like to see? (even, odd, exit):\n "))
+                if print_response=='even':
+                    for line in even_file:
+                        print(line.strip().rjust(25)+'\n')
+                    print('__________________________________________________________________________________________________')
+                elif print_response=='odd':
+                    for line in odd_file:
+                        print(line.strip().rjust(25)+'\n')
+                    print('__________________________________________________________________________________________________')
+                elif print_response=='exit':
+                    print("\nThank you.")
+                    exit()
+                else:
+                    print("Invalid")
+                    print("____________________________________________________________________________________________________")
+            elif response=='n':
+                print("\nThank you.")
+                exit()
+            else:
+                print("Invalid")
+                print("____________________________________________________________________________________________________")
 
 # Execute the code
 sEven_cOdd_itegers()
+open_text()
