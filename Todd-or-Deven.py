@@ -12,8 +12,11 @@ with open("integers.txt", "r") as integer_file, open ("squared_even.txt", "w") a
     # iterate the list
     for num in integer_list:
         # identify whether integer is even or odd using mod
+        # if even, square it, and write it to "squared_even.txt" file
         if num%2==0:
             squared=num**2
             even_file.write(str(squared)+'\n')
-        # if even, square it, and write it to "squared_even.txt" file
-# if odd, cube it, and write it to "cubed_odd.txt" file
+        # if odd, cube it, and write it to "cubed_odd.txt" file
+        else:
+            cubed=num**3
+            odd_file.write(str(cubed)+'n')
