@@ -81,3 +81,6 @@ def open_text():
 sEven_cOdd_itegers()
 check_contents()
 open_text()
+
+# HONTIVEROS JEROME ANDREI O.
+# BSCPE 1-5
