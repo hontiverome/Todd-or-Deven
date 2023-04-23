@@ -6,8 +6,8 @@
 # define the method/function
 # read and write the input and output files
 with open("integers.txt", "r") as integer_file, open ("squared_even.txt", "w") as even_file, open ("cubed_odd.txt", "w") as odd_file:
-    
-# put the numbers from the read file into a list and convert it into integers
+    # put the numbers from the read file into a list and convert it into integers
+    integers=[line.strip()for line in integer_file]
 # iterate the list
 # identify whether integer is even or odd using mod
 # if even, square it, and write it to "squared_even.txt" file
