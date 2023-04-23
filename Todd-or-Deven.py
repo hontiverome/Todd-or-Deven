@@ -23,7 +23,19 @@ def sEven_cOdd_itegers():
                 odd_file.write(str(cubed)+'\n')
 def check_contents():
     with open("integers.txt", "r") as integer_file:
-
+        contents=str(input("Would you like to see the contents of 'numbers.txt?' (y or n)\n"))
+        while True:
+            if contents=='y':
+                integers=[lines.strip() for lines in integer_file]
+                integer_list=[int(j) for j in integers]
+                print(integer_list)
+                break
+            elif contents=='n':
+                break
+            else:
+                print("invalid")
+                contents=str(input("Would you like to see the contents of 'numbers.txt?' (y or n)\n"))
+                continue
         
 def open_text():
     with open ("squared_even.txt", "r") as even_file, open ("cubed_odd.txt", "r") as odd_file:
@@ -54,4 +66,5 @@ def open_text():
 
 # Execute the code
 sEven_cOdd_itegers()
+check_contents()
 open_text()
