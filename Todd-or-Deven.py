@@ -21,6 +21,7 @@ def sEven_cOdd_itegers():
             else:
                 cubed=num**3
                 odd_file.write(str(cubed)+'\n')
+def open_text():
 
 # Execute the code
 sEven_cOdd_itegers()
