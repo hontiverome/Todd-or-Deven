@@ -5,6 +5,7 @@
 
 # define the method/function
 # read and write the input and output filesd
+import time
 def sEven_cOdd_itegers():
     with open("integers.txt", "r") as integer_file, open ("squared_even.txt", "w") as even_file, open ("cubed_odd.txt", "w") as odd_file:
         # put the numbers from the read file into a list and convert it into integers
@@ -44,10 +45,22 @@ def open_text():
             if response=='y':
                 print_response=str(input("\nWhat text file would you like to see? (even, odd, exit):\n "))
                 if print_response=='even':
+                    print("You chose even.")
+                    time.sleep(0.5)
+                    even_result=("Here is the squared even list.\n")
+                    for i in range(len(even_result)):
+                        print(even_result[i], end='', flush=True)
+                        time.sleep(0.1)
                     for line in even_file:
                         print(line.strip().rjust(25)+'\n')
                     print('__________________________________________________________________________________________________')
                 elif print_response=='odd':
+                    print("You chose odd.")
+                    time.sleep(0.5)
+                    even_result=("Here is the cubed odd list.\n")
+                    for i in range(len(even_result)):
+                        print(even_result[i], end='', flush=True)
+                        time.sleep(0.1)
                     for line in odd_file:
                         print(line.strip().rjust(25)+'\n')
                     print('__________________________________________________________________________________________________')
